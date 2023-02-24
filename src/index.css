@@ -35,3 +35,10 @@ nav ul {
 li::marker {
   display: none;
 }
+
+#data-container {
+  background-color: red;
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+}

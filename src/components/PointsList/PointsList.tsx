@@ -7,6 +7,10 @@ import * as pointService from '../../services/pointservice'
 // types
 import { Point } from '../../types/models';
 
+// components
+import PointComponent from '../Point/PointComponent'
+
+
 const PointsList = (): JSX.Element => {
   const [points, setPoints] = useState<Point[]>([])
 
@@ -28,7 +32,8 @@ const PointsList = (): JSX.Element => {
     <>
       <h1>HERE ARE THE POINTS</h1>
       {points.map((point: Point) =>
-        <p key={point.id}>{point.depth[0]}</p>
+        <PointComponent point={point}/>
+        // <p key={point.id}>{point.depth[0]}</p>
       )}
     </>
   )
