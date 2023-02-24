@@ -11,8 +11,8 @@ interface PointsProps {
 const PointComponent = (props: PointsProps): JSX.Element => {
   const { point } = props
 
-  const handleDeletePoint = async(): Promise<void> => {
-    await pointService.deletePoint(point.id)
+  const handleDeletePoint = async(id: number): Promise<void> => {
+    await pointService.deletePoint(id)
   }
 
   return (
@@ -21,7 +21,7 @@ const PointComponent = (props: PointsProps): JSX.Element => {
       LAT:{point.latitude}
       LONG: {point.longitude}
       <button
-      // onClick={() => handleDeletePoint()}
+      onClick={() => handleDeletePoint(point.id)}
       >
         DELETE
       </button>

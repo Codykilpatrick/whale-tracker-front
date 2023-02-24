@@ -30,7 +30,7 @@ async function createPoint(
       body: JSON.stringify(formData)     
     })
     console.log(JSON.stringify(formData));
-    await res.json()
+    return await res.json()
   } catch (error) {
     throw error
   }

@@ -7,7 +7,11 @@ import { PointFormData } from "../../types/forms"
 // services
 import * as pointService from '../../services/pointservice'
 
-const NewPointForm = ():JSX.Element => {
+interface NewPointFormProps {
+  handleAddPoint: any;
+}
+
+const NewPointForm = (props: NewPointFormProps):JSX.Element => {
 
   const [formData, setFormData] = useState<PointFormData>({
     latitude: 0,
@@ -21,7 +25,9 @@ const NewPointForm = ():JSX.Element => {
   const handleSubmit = async (evt: React.FormEvent): Promise<void> => {
     evt.preventDefault()
     try {
-      await pointService.createPoint(formData)
+      const newPoint = await pointService.createPoint(formData)
+      console.log(newPoint);
+      props.handleAddPoint(newPoint)
     } catch (error) {
       console.log(error);
     }

@@ -27,15 +27,25 @@ const PointsList = (): JSX.Element => {
     fetchPoints()
   }, [])
 
-  if(!points.length) return <NewPointForm />
+  const handleAddPoint = async (newPoint: Point):Promise<void> => {
+    try {
+      // console.log("new", newPoint);
+      // console.log("points", ...points);
+      setPoints([newPoint, ...points])
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+
+  // if(!points.length) return <NewPointForm />
 
   return (
     <>
       <h1>HERE ARE THE POINTS</h1>
-      <NewPointForm />
+      <NewPointForm handleAddPoint={handleAddPoint}/>
       {points.map((point: Point) =>
         <PointComponent key={point.id} point={point}/>
-        // <p key={point.id}>{point.depth[0]}</p>
       )}
     </>
   )
