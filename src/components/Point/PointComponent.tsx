@@ -1,6 +1,7 @@
 // types
 import { Point } from '../../types/models';
 
+
 interface PointsProps {
   point: Point
 }

@@ -3,6 +3,7 @@ import * as tokenService from './tokenService'
 
 // types
 import { Point } from '../types/models'
+import { PointFormData } from '../types/forms'
 
 const BASE_URL = `${import.meta.env.VITE_BACK_END_SERVER_URL}/api/points`
 
@@ -18,4 +19,21 @@ async function getAllPoints(): Promise<Point[]> {
   }
 }
 
-export { getAllPoints }
+async function createPoint(
+  formData: PointFormData
+): Promise<void> {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)     
+    })
+    console.log(JSON.stringify(formData));
+    await res.json()
+  } catch (error) {
+    throw error
+  }
+}
+
+export { getAllPoints, createPoint }
