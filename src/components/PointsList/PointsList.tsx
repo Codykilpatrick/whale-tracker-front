@@ -21,6 +21,7 @@ const PointsList = (): JSX.Element => {
         const pointsData: Point[] = await pointService.getAllPoints()
         setPoints(pointsData)
       } catch (error) {
+        console.log(error);
         
       }
     }
@@ -32,7 +33,6 @@ const PointsList = (): JSX.Element => {
       setPoints([newPoint, ...points])
     } catch (error) {
       console.log(error);
-      
     }
   }
 
