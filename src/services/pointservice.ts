@@ -36,4 +36,17 @@ async function createPoint(
   }
 }
 
-export { getAllPoints, createPoint }
+async function deletePoint(id: number) {
+  try {
+    await fetch(`${BASE_URL}/${id}/delete`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+      }
+    })
+  } catch (error) {
+    throw error
+  }
+}
+
+export { getAllPoints, createPoint, deletePoint }

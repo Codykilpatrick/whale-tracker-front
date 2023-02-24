@@ -1,6 +1,8 @@
 // types
 import { Point } from '../../types/models';
 
+// services
+import * as pointService from '../../services/pointservice'
 
 interface PointsProps {
   point: Point
@@ -9,15 +11,27 @@ interface PointsProps {
 const PointComponent = (props: PointsProps): JSX.Element => {
   const { point } = props
 
+  const handleDeletePoint = async(): Promise<void> => {
+    await pointService.deletePoint(point.id)
+  }
+
   return (
     <>
-    <h2>LAT:{point.latitude} LONG: {point.longitude}</h2>
+    <h2>
+      LAT:{point.latitude}
+      LONG: {point.longitude}
+      <button
+      // onClick={() => handleDeletePoint()}
+      >
+        DELETE
+      </button>
+    </h2>
       <div id="data-container">
         <div>
           <h3>Depth</h3>
         {point.depth.map(depth =>
           <p>
-            {depth.toFixed(1)}
+            {depth?.toFixed(1)}
           </p>
         )}
         </div>
@@ -25,7 +39,7 @@ const PointComponent = (props: PointsProps): JSX.Element => {
           <h3>Temperature</h3>
           {point.temperature.map(temp =>
             <p>
-              {temp.toFixed(1)}
+              {temp?.toFixed(1)}
             </p>
           )}
         </div>
@@ -33,7 +47,7 @@ const PointComponent = (props: PointsProps): JSX.Element => {
         <h3>Salinity</h3>
           {point.salinity.map(salinity =>
             <p>
-              {salinity.toFixed(1)}
+              {salinity?.toFixed(1)}
             </p>
           )}
         </div>
@@ -41,50 +55,12 @@ const PointComponent = (props: PointsProps): JSX.Element => {
           <h3>Sound Speed</h3>
         {point.soundspeed.map(ss =>
             <p>
-              {ss.toFixed(1)}
+              {ss?.toFixed(1)}
             </p>
           )}
         </div>
       </div>
-
-    {/* <div id="table-container">
-
-    <table>
-      <thead>
-        <tr>
-          <th>Depth</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-        {point.depth.map(depth =>
-          <tr>
-            {depth}
-          </tr>
-        )}
-        </tr>
-      </tbody>
-    </table>
-
-    <table>
-      <thead>
-        <tr>
-          <th>SS</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-        {point.temperature.map(temp =>
-          <tr>
-            {temp}
-          </tr>
-        )}
-        </tr>
-      </tbody>
-    </table>
-        </div> */}
-
-        </>
+    </>
   )
 }
 export default PointComponent

@@ -27,14 +27,14 @@ const PointsList = (): JSX.Element => {
     fetchPoints()
   }, [])
 
-  if(!points.length) return <p>No points yet</p>
+  if(!points.length) return <NewPointForm />
 
   return (
     <>
       <h1>HERE ARE THE POINTS</h1>
       <NewPointForm />
       {points.map((point: Point) =>
-        <PointComponent point={point}/>
+        <PointComponent key={point.id} point={point}/>
         // <p key={point.id}>{point.depth[0]}</p>
       )}
     </>
