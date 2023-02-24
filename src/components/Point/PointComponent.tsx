@@ -5,7 +5,9 @@ import { Point } from '../../types/models';
 import * as pointService from '../../services/pointservice'
 
 interface PointsProps {
-  point: Point
+  point: Point;
+  points: any;
+  setPoints: any;
 }
 
 const PointComponent = (props: PointsProps): JSX.Element => {
@@ -13,6 +15,7 @@ const PointComponent = (props: PointsProps): JSX.Element => {
 
   const handleDeletePoint = async(id: number): Promise<void> => {
     await pointService.deletePoint(id)
+    props.setPoints(props.points.filter(el => el.id !== point.id))
   }
 
   return (

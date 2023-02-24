@@ -29,7 +29,6 @@ async function createPoint(
       'Content-Type': 'application/json' },
       body: JSON.stringify(formData)     
     })
-    console.log(JSON.stringify(formData));
     return await res.json()
   } catch (error) {
     throw error
