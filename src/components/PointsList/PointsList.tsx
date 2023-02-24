@@ -9,6 +9,7 @@ import { Point } from '../../types/models';
 
 // components
 import PointComponent from '../Point/PointComponent'
+import NewPointForm from '../NewPointForm/NewPointForm';
 
 
 const PointsList = (): JSX.Element => {
@@ -31,6 +32,7 @@ const PointsList = (): JSX.Element => {
   return (
     <>
       <h1>HERE ARE THE POINTS</h1>
+      <NewPointForm />
       {points.map((point: Point) =>
         <PointComponent point={point}/>
         // <p key={point.id}>{point.depth[0]}</p>
