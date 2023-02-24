@@ -3,6 +3,7 @@ import styles from './Landing.module.css'
 
 // types
 import { User } from '../../types/models'
+import PointsList from '../../components/PointsList/PointsList';
 
 interface LandingProps {
   user: User | null;
@@ -14,6 +15,7 @@ const Landing = (props: LandingProps): JSX.Element => {
   return (
     <main className={styles.container}>
       <h1>hello, {user ? user.name : 'friend'}</h1>
+      <PointsList />
     </main>
   )
 }

@@ -20,3 +20,14 @@ export interface User {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface Point {
+  id: number;
+  owner: number,
+  latitude: number,
+  longitude: number,
+  depth: number[],
+  salinity: number[],
+  temperature: number[],
+  soundspeed: number[],
+}
