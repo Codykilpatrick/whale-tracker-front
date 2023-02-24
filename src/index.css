@@ -5,6 +5,7 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: grey;
 }
 
 code {
@@ -16,9 +17,8 @@ nav {
   top: 0;
   z-index: 1;
   width: 100%;
-  height: 80px;
+  height: 40px;
   display: flex;
-  position: fixed;
   padding: 12px 20px;
   align-items: center;
   background: white;
@@ -30,4 +30,8 @@ nav ul {
   flex-direction: row;
   width: 100%;
   justify-content: space-around;
+}
+
+li::marker {
+  display: none;
 }
