@@ -11,7 +11,6 @@ import { Point } from '../../types/models';
 import PointComponent from '../Point/PointComponent'
 import NewPointForm from '../NewPointForm/NewPointForm';
 
-
 const PointsList = (): JSX.Element => {
   const [points, setPoints] = useState<Point[]>([])
 

@@ -4,6 +4,10 @@ import { Point } from '../../types/models';
 // services
 import * as pointService from '../../services/pointservice'
 
+// styles
+import styles from './PointComponent.module.css'
+
+
 interface PointsProps {
   point: Point;
   points: any;
