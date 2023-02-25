@@ -1,3 +1,6 @@
+// mpn packages
+import { useState } from 'react';
+
 // types
 import { Point } from '../../types/models';
 
@@ -16,7 +19,8 @@ interface PointsProps {
 
 const PointComponent = (props: PointsProps): JSX.Element => {
   const { point } = props
-  let showTable = true
+  // let showTable = true
+  const [show, setShow] = useState<boolean>(false)
 
   const handleDeletePoint = async(id: number): Promise<void> => {
     await pointService.deletePoint(id)
@@ -24,60 +28,58 @@ const PointComponent = (props: PointsProps): JSX.Element => {
   }
 
   const showTableData = () => {
-    console.log("SHOW TABLE BEFORE", showTable);
-    showTable = !showTable
-    console.log("SHOW TABLE AFTER", showTable);
-    
+    setShow(!show)
   }
 
   return (
     <>
-    <h2>
-      LAT:{point.latitude}
-      LONG: {point.longitude}
-      <button
-      onClick={() => handleDeletePoint(point.id)}
-      >
-        DELETE
-      </button>
-      <button
-      onClick={() => showTableData()}
-      >
-        SHOW
-      </button>
-    </h2>
-      <div class="data-container" className={styles.dataContainer}>
+      <h2>
+        LAT:{point.latitude}
+        LONG: {point.longitude}
+        <button
+        onClick={() => handleDeletePoint(point.id)}
+        >
+          DELETE
+        </button>
+        <button
+        onClick={() => showTableData()}
+        >
+          SHOW
+        </button>
+      </h2>
+      <div className={show ? styles.dataContainer : styles.dataContainerHidden}>
+      {/* { showTable ? <div className={styles.dataContainer}> : <div className={styles.dataContainerHidden}> } */}
         <div>
           <h3>Depth</h3>
-        {point.depth.map((depth, idx) =>
-          <p key={idx}>
-            {depth?.toFixed(1)}
-          </p>
-        )}
+          {point.depth.map((depth, idx) =>
+            <p key={idx}>
+              {depth?.toFixed(1)}
+            </p>
+          )}
         </div>
         <div>
           <h3>Temperature</h3>
-          {point.temperature.map((temp, idx) =>
-            <p key={idx}>
-              {temp?.toFixed(1)}
-            </p>
-          )}
+            {point.temperature.map((temp, idx) =>
+              <p key={idx}>
+                {temp?.toFixed(1)}
+              </p>
+            )}
         </div>
         <div>
-        <h3>Salinity</h3>
-          {point.salinity.map((salinity, idx) =>
-            <p key={idx}>
-              {salinity?.toFixed(1)}
-            </p>
-          )}
+          <h3>Salinity</h3>
+            {point.salinity.map((salinity, idx) =>
+              <p key={idx}>
+                {salinity?.toFixed(1)}
+              </p>
+            )}
         </div>
         <div>
           <h3>Sound Speed</h3>
-        {point.soundspeed.map((ss, idx) =>
+          {point.soundspeed.map((ss, idx) =>
             <p key={idx}>
               {ss?.toFixed(1)}
             </p>
-          )}
+            )}
         </div>
       </div>
     </>
