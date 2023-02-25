@@ -1,0 +1,7 @@
+.loadingMessage {
+  color: white;
+}
+
+.loadingMessageHidden {
+  display: none;
+}

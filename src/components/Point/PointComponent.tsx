@@ -19,7 +19,6 @@ interface PointsProps {
 
 const PointComponent = (props: PointsProps): JSX.Element => {
   const { point } = props
-  // let showTable = true
   const [show, setShow] = useState<boolean>(false)
 
   const handleDeletePoint = async(id: number): Promise<void> => {
