@@ -46,6 +46,15 @@ li a:hover {
   color: #FB4D3D;
 }
 
+div.mapboxgl-map {
+  margin-top: 2%;
+  border-radius: 40px;
+}
+
 div.mapboxgl-map img {
   width: 50px;
+}
+
+div.mapboxgl-map a {
+  display: none;
 }
