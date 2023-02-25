@@ -41,38 +41,40 @@ const NewPointForm = (props: NewPointFormProps):JSX.Element => {
 
   return (
     <>
-      <h3>New Point</h3>
-      <h4 className={loading ? styles.loadingMessage : styles.loadingMessageHidden}>Loading...</h4>
-      <form
-        autoComplete="off"
-        onSubmit={handleSubmit}
-      >
-        <div>
-          <label htmlFor="latitude">Latitiude</label>
-          <input 
-          type="number"
-          id="latitude"
-          value={formData.latitude}
-          name="latitude"
-          onChange={handleChange}
-          />
-        </div>
-        <div>
-        <label htmlFor="longitude">Longitude</label>
-          <input 
-          type="number"
-          id="longitude"
-          value={formData.longitude}
-          name="longitude"
-          onChange={handleChange}
-          />
-        </div>
-        <div>
-          <button
-          disabled={loading}
-          >Submit</button>
-        </div>
-      </form>
+      <h2>New Point</h2>
+      <div className={styles.newPointContainer}>
+        <h4 className={loading ? styles.loadingMessage : styles.loadingMessageHidden}>Loading...</h4>
+        <form
+          autoComplete="off"
+          onSubmit={handleSubmit}
+        >
+          <div>
+            <label htmlFor="latitude">Latitiude</label>
+            <input 
+            type="number"
+            id="latitude"
+            value={formData.latitude}
+            name="latitude"
+            onChange={handleChange}
+            />
+          </div>
+          <div>
+          <label htmlFor="longitude">Longitude</label>
+            <input 
+            type="number"
+            id="longitude"
+            value={formData.longitude}
+            name="longitude"
+            onChange={handleChange}
+            />
+          </div>
+          <div>
+            <button
+            disabled={loading}
+            >Submit</button>
+          </div>
+        </form>
+      </div>
     </>
   )
 }

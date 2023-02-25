@@ -5,3 +5,20 @@
 .loadingMessageHidden {
   display: none;
 }
+
+.newPointContainer {
+  background-color: red;
+  padding: 1%;
+  width: 70%;
+}
+
+.newPointContainer form {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: green;
+  padding: 1%;
+}
+
+.newPointContainer button {
+  background-color: red;
+}
