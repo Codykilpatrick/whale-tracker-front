@@ -1,15 +1,15 @@
 svg {
-  border-left: 1px solid #B5EF8A;
-  /* border-right: 1px solid #B5EF8A; */
+  border-left: 2px solid #B5EF8A;
+  border-right: 2px solid #B5EF8A;
 }
 
 .dataContainer {
   display: flex;
   width: 80%;
   justify-content: space-evenly;
-  border-bottom: 1px solid #B5EF8A;
-  border-top: 1px solid #B5EF8A;
-  border-left: 1px solid #B5EF8A;
+  border-bottom: 2px solid #B5EF8A;
+  border-top: 2px solid #B5EF8A;
+  border-left: 2px solid #B5EF8A;
 }
 
 .dataContainer div {
@@ -29,16 +29,22 @@ svg {
   align-items: center;
 }
 
+.dataContainer div :nth-child(2) {
+  border-top: 1px solid black;
+}
+
 .dataContainer p:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid black;
 }
 
 .dataContainer button {
   border: none;
+  border-right: 2px solid #B5EF8A;
+  background-color: #446DF6;
 }
 
 .dataContainer button:hover {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.44);
   color: white;
 }
 
@@ -51,7 +57,8 @@ svg {
   align-items: center;
   justify-content: space-evenly;
   width: 80%;
-  /* background-color: red; */
+  border-radius: 20px;
+  background-color: #00635D;
 }
 
 .pointHeader button {
@@ -59,9 +66,10 @@ svg {
   padding: 1.5%;
   border-radius: 10px;
   border: none;
+  background-color: #446DF6;
 }
 
 .pointHeader button:hover {
-  background-color: black;
-  color: white;
+  background-color: #EAC435;
+  color: #00635D;
 }

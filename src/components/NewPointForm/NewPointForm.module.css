@@ -15,7 +15,7 @@
   align-items: center;
   border-radius: 20px;
   justify-content: space-evenly;
-  background-color: #FB4D3D;
+  background-color: #EAC435;
   padding: 1%;
 }
 
@@ -27,5 +27,13 @@
 }
 
 .newPointContainer button {
-  background-color: red;
+  background-color: #446DF6;
+  border: none;
+  border-radius: 20px;
+  padding: 20%;
+}
+
+.newPointContainer button:hover {
+  background-color: #00635D;
+  color: #EAC435;
 }
