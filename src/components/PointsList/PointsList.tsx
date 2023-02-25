@@ -57,8 +57,14 @@ const PointsList = (): JSX.Element => {
         mapStyle="mapbox://styles/codykilpatrick/clekdcsmo001k01ofk2cgb9aj"
       >
         {points.map((point: Point) =>
-        <Marker longitude={point.longitude} latitude={point.latitude} anchor="bottom" >
-          <img src="https://i.imgur.com/RrXS8nR.png"/>
+        <Marker
+          key={point.id + point.latitude + point.longitude}
+          longitude={point.longitude} 
+          latitude={point.latitude} 
+          anchor="bottom" 
+          onClick={() => console.log("AH")}
+        >
+          <img src="https://i.imgur.com/6dddE05.png"/>
         </Marker>
           )}
       </Map>
