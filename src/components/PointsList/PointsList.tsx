@@ -38,7 +38,7 @@ const PointsList = (): JSX.Element => {
 
   return (
     <>
-      <h1>HERE ARE THE POINTS</h1>
+      <h1>Measurements</h1>
       <NewPointForm handleAddPoint={handleAddPoint}/>
       {points.map((point: Point) =>
         <PointComponent key={point.id} point={point} points={points} setPoints={setPoints}/>

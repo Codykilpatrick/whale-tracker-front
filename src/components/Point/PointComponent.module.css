@@ -1,15 +1,15 @@
 svg {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid #B5EF8A;
+  /* border-right: 1px solid #B5EF8A; */
 }
 
 .dataContainer {
   display: flex;
   width: 80%;
   justify-content: space-evenly;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
+  border-bottom: 1px solid #B5EF8A;
+  border-top: 1px solid #B5EF8A;
+  border-left: 1px solid #B5EF8A;
 }
 
 .dataContainer div {

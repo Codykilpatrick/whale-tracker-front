@@ -49,7 +49,7 @@ const NewPointForm = (props: NewPointFormProps):JSX.Element => {
           onSubmit={handleSubmit}
         >
           <div>
-            <label htmlFor="latitude">Latitiude</label>
+            <label htmlFor="latitude">Latitiude:</label>
             <input 
             type="number"
             id="latitude"
@@ -59,7 +59,7 @@ const NewPointForm = (props: NewPointFormProps):JSX.Element => {
             />
           </div>
           <div>
-          <label htmlFor="longitude">Longitude</label>
+          <label htmlFor="longitude">Longitude:</label>
             <input 
             type="number"
             id="longitude"

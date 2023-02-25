@@ -7,16 +7,23 @@
 }
 
 .newPointContainer {
-  background-color: red;
-  padding: 1%;
   width: 70%;
 }
 
 .newPointContainer form {
   display: flex;
+  align-items: center;
+  border-radius: 20px;
   justify-content: space-evenly;
-  background-color: green;
+  background-color: #FB4D3D;
   padding: 1%;
+}
+
+.newPointContainer form input {
+  background-color: #446DF6;
+  border: none;
+  border-radius: 20px;
+  padding: 2%;
 }
 
 .newPointContainer button {
