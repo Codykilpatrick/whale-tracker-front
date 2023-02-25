@@ -1,0 +1,23 @@
+.dataContainer {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  /* display: none !important; */
+}
+
+.data-container div {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.data-container p {
+  border-bottom: 1px solid black;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

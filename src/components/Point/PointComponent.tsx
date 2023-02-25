@@ -16,10 +16,18 @@ interface PointsProps {
 
 const PointComponent = (props: PointsProps): JSX.Element => {
   const { point } = props
+  let showTable = true
 
   const handleDeletePoint = async(id: number): Promise<void> => {
     await pointService.deletePoint(id)
     props.setPoints(props.points.filter((el: Point) => el.id !== point.id))
+  }
+
+  const showTableData = () => {
+    console.log("SHOW TABLE BEFORE", showTable);
+    showTable = !showTable
+    console.log("SHOW TABLE AFTER", showTable);
+    
   }
 
   return (
@@ -32,8 +40,13 @@ const PointComponent = (props: PointsProps): JSX.Element => {
       >
         DELETE
       </button>
+      <button
+      onClick={() => showTableData()}
+      >
+        SHOW
+      </button>
     </h2>
-      <div id="data-container">
+      <div class="data-container" className={styles.dataContainer}>
         <div>
           <h3>Depth</h3>
         {point.depth.map((depth, idx) =>
