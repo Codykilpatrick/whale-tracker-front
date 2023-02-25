@@ -111,6 +111,8 @@ const PointComponent = (props: PointsProps): JSX.Element => {
             size: 24,
             color: 'black'
           },
+        }, font: {
+          color: 'black'
         }, autosize: true, yaxis: {autorange: 'reversed'}} }
       />
       </div>
