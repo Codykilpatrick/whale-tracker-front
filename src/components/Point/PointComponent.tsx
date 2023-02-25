@@ -39,12 +39,12 @@ const PointComponent = (props: PointsProps): JSX.Element => {
         <button
         onClick={() => handleDeletePoint(point.id)}
         >
-          DELETE
+          Delete
         </button>
         <button
         onClick={() => showTableData()}
         >
-          SHOW
+          {show ? "Show" : "Hide"}
         </button>
       </h2>
       <div className={show ? styles.dataContainer : styles.dataContainerHidden}>
