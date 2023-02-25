@@ -62,7 +62,7 @@ const PointsList = (): JSX.Element => {
           longitude={point.longitude} 
           latitude={point.latitude} 
           anchor="bottom" 
-          onClick={() => console.log("AH")}
+          onClick={() => console.log("AHH")}
         >
           <img src="https://i.imgur.com/6dddE05.png"/>
         </Marker>
