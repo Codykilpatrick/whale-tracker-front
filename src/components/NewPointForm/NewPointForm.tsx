@@ -68,7 +68,9 @@ const NewPointForm = (props: NewPointFormProps):JSX.Element => {
           />
         </div>
         <div>
-          <button>Submit</button>
+          <button
+          disabled={loading}
+          >Submit</button>
         </div>
       </form>
     </>
