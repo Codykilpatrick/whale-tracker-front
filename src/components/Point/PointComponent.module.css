@@ -33,6 +33,15 @@ svg {
   border-bottom: none;
 }
 
+.dataContainer button {
+  border: none;
+}
+
+.dataContainer button:hover {
+  background-color: red;
+  color: white;
+}
+
 .dataContainerHidden {
   display: none;
 }
