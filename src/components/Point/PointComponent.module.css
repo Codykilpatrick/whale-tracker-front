@@ -2,7 +2,9 @@
   display: flex;
   width: 80%;
   justify-content: space-evenly;
-  /* display: none !important; */
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
 }
 
 .dataContainer div {
@@ -22,6 +24,11 @@
   align-items: center;
 }
 
+.dataContainer p:last-child {
+  border-bottom: none;
+}
+
 .dataContainerHidden {
   display: none;
 }
+

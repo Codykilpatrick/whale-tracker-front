@@ -1,5 +1,6 @@
 // mpn packages
 import { useState } from 'react';
+import Plot from 'react-plotly.js'
 
 // types
 import { Point } from '../../types/models';
@@ -25,6 +26,12 @@ const PointComponent = (props: PointsProps): JSX.Element => {
     await pointService.deletePoint(id)
     props.setPoints(props.points.filter((el: Point) => el.id !== point.id))
   }
+
+  const depthArray: number[] = []
+  point.depth.forEach(depth => depthArray.push(depth))
+  const soundSpeedArray: number[] = []
+  point.soundspeed.forEach(soundSpeed => soundSpeedArray.push(soundSpeed))
+
 
   const showTableData = () => {
     setShow(!show)
@@ -81,6 +88,31 @@ const PointComponent = (props: PointsProps): JSX.Element => {
             </p>
             )}
         </div>
+        <Plot
+        data={[
+          {
+            y: depthArray,
+            x: soundSpeedArray,
+            type: 'scatter',
+            mode: 'lines+markers',
+            marker: {color: 'red'},
+          }
+        ]}
+        layout={ { plot_bgcolor:"grey", paper_bgcolor:"grey", width: 320,  margin: {
+          l: 50,
+          r: 50,
+          b: 20,
+          t: 40,
+          pad: 0
+        }, title: {
+          text:'SSP',
+          font: {
+            family: 'Courier New, monospace',
+            size: 24,
+            color: 'black'
+          },
+        }, autosize: true, yaxis: {autorange: 'reversed'}} }
+      />
       </div>
     </>
   )
