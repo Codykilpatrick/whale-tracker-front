@@ -39,15 +39,13 @@ const PointComponent = (props: PointsProps): JSX.Element => {
 
   return (
     <>
-      <h2>
-        LAT:{point.latitude}
-        LONG: {point.longitude}
-        ID: {point.id}
-        <button
-        onClick={() => handleDeletePoint(point.id)}
-        >
-          Delete
-        </button>
+      <h2 className={styles.pointHeader}>
+        <p>
+          Latitude: {point.latitude}
+        </p>
+        <p>
+          Longitude: {point.longitude}
+        </p>
         <button
         onClick={() => showTableData()}
         >
@@ -55,7 +53,6 @@ const PointComponent = (props: PointsProps): JSX.Element => {
         </button>
       </h2>
       <div className={show ? styles.dataContainer : styles.dataContainerHidden}>
-      {/* { showTable ? <div className={styles.dataContainer}> : <div className={styles.dataContainerHidden}> } */}
         <div>
           <h3>Depth</h3>
           {point.depth.map((depth, idx) =>
@@ -115,6 +112,11 @@ const PointComponent = (props: PointsProps): JSX.Element => {
           color: 'black'
         }, autosize: true, yaxis: {autorange: 'reversed'}} }
       />
+        <button
+        onClick={() => handleDeletePoint(point.id)}
+        >
+          Delete
+        </button>
       </div>
     </>
   )

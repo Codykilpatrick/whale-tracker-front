@@ -1,3 +1,8 @@
+svg {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
 .dataContainer {
   display: flex;
   width: 80%;
@@ -32,7 +37,22 @@
   display: none;
 }
 
-svg {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+.pointHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  /* background-color: red; */
+}
+
+.pointHeader button {
+  height: fit-content;
+  padding: 1.5%;
+  border-radius: 10px;
+  border: none;
+}
+
+.pointHeader button:hover {
+  background-color: black;
+  color: white;
 }
