@@ -45,3 +45,7 @@ li a {
 li a:hover {
   color: #FB4D3D;
 }
+
+div.mapboxgl-map img {
+  width: 50px;
+}

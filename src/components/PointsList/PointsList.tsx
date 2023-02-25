@@ -1,6 +1,6 @@
 // npm packages
 import { useState, useEffect } from 'react';
-import Map from "react-map-gl";
+import Map, { Marker } from "react-map-gl";
 
 // services
 import * as pointService from '../../services/pointservice'
@@ -47,15 +47,19 @@ const PointsList = (): JSX.Element => {
   return (
     <>
       <Map
-      mapboxAccessToken='pk.eyJ1IjoiY29keWtpbHBhdHJpY2siLCJhIjoiY2xla2NkZXhmMGdyeDQzbWxkd3Flc2UxbCJ9.YDQHBecK22YVpggfTsAsLA'
+      mapboxAccessToken='pk.eyJ1IjoiY29keWtpbHBhdHJpY2siLCJhIjoiY2xla2FzOXR3MGF3eTNwbG00OXNxMXFjcCJ9.85jtdIfHPE4UGaz8qvp8OA'
         initialViewState={{
           longitude: -100,
           latitude: 40,
           zoom: 3.5
         }}
         style={{width: 600, height: 400}}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
-      />
+        mapStyle="mapbox://styles/codykilpatrick/clekdcsmo001k01ofk2cgb9aj"
+      >
+        <Marker longitude={-100} latitude={40} anchor="bottom" >
+          <img src="https://i.imgur.com/RrXS8nR.png"/>
+        </Marker>
+      </Map>
       <h1>Measurements</h1>
       <NewPointForm handleAddPoint={handleAddPoint}/>
       {points.map((point: Point) =>
