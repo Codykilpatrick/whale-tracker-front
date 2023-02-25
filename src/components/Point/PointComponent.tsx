@@ -88,7 +88,7 @@ const PointComponent = (props: PointsProps): JSX.Element => {
             </p>
             )}
         </div>
-        <Plot
+        <Plot className={'plot'}
         data={[
           {
             y: depthArray,
