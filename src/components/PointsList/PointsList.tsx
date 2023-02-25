@@ -56,9 +56,11 @@ const PointsList = (): JSX.Element => {
         style={{width: 600, height: 400}}
         mapStyle="mapbox://styles/codykilpatrick/clekdcsmo001k01ofk2cgb9aj"
       >
-        <Marker longitude={-100} latitude={40} anchor="bottom" >
+        {points.map((point: Point) =>
+        <Marker longitude={point.longitude} latitude={point.latitude} anchor="bottom" >
           <img src="https://i.imgur.com/RrXS8nR.png"/>
         </Marker>
+          )}
       </Map>
       <h1>Measurements</h1>
       <NewPointForm handleAddPoint={handleAddPoint}/>
