@@ -35,6 +35,7 @@ const PointComponent = (props: PointsProps): JSX.Element => {
       <h2>
         LAT:{point.latitude}
         LONG: {point.longitude}
+        ID: {point.id}
         <button
         onClick={() => handleDeletePoint(point.id)}
         >
@@ -43,7 +44,7 @@ const PointComponent = (props: PointsProps): JSX.Element => {
         <button
         onClick={() => showTableData()}
         >
-          {show ? "Show" : "Hide"}
+          {show ? "Hide" : "Show"}
         </button>
       </h2>
       <div className={show ? styles.dataContainer : styles.dataContainerHidden}>

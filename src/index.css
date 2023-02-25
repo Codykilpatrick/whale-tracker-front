@@ -32,6 +32,16 @@ nav ul {
   justify-content: space-around;
 }
 
-li::marker {
-  display: none;
+li {
+  list-style: none;
+  color: black;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: red;
 }

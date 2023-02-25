@@ -21,7 +21,6 @@ const PointsList = (): JSX.Element => {
         setPoints(pointsData)
       } catch (error) {
         console.log(error);
-        
       }
     }
     fetchPoints()
