@@ -42,12 +42,13 @@ li a {
 }
 
 li a:hover {
-  color: #FB4D3D;
+  color: white;
 }
 
 div.mapboxgl-map {
   margin-top: 2%;
   border-radius: 40px;
+  border: 3px solid black;
 }
 
 div.mapboxgl-map img {

@@ -10,7 +10,8 @@ import { Point } from '../../types/models';
 
 // components
 import PointComponent from '../Point/PointComponent'
-import NewPointForm from '../NewPointForm/NewPointForm';
+import NewPointForm from '../NewPointForm/NewPointForm'
+
 
 const PointsList = (): JSX.Element => {
   const [points, setPoints] = useState<Point[]>([])
@@ -47,7 +48,7 @@ const PointsList = (): JSX.Element => {
   return (
     <>
       <Map
-      mapboxAccessToken='pk.eyJ1IjoiY29keWtpbHBhdHJpY2siLCJhIjoiY2xla2FzOXR3MGF3eTNwbG00OXNxMXFjcCJ9.85jtdIfHPE4UGaz8qvp8OA'
+        mapboxAccessToken='pk.eyJ1IjoiY29keWtpbHBhdHJpY2siLCJhIjoiY2xla2FzOXR3MGF3eTNwbG00OXNxMXFjcCJ9.85jtdIfHPE4UGaz8qvp8OA'
         initialViewState={{
           longitude: points[0].longitude,
           latitude: points[0].latitude,

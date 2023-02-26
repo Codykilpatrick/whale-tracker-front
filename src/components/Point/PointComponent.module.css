@@ -59,6 +59,7 @@ svg {
   width: 80%;
   border-radius: 20px;
   background-color: #F7AF9D;
+  border: 3px solid black;
 }
 
 .pointHeader button {
