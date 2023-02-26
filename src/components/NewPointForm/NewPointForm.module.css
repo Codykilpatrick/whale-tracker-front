@@ -1,5 +1,10 @@
 .loadingMessage {
-  color: white;
+  color: black;
+  text-align: center;
+}
+
+.loadingMessage img {
+  width: 72px;
 }
 
 .loadingMessageHidden {

@@ -43,7 +43,7 @@ const NewPointForm = (props: NewPointFormProps):JSX.Element => {
     <>
       <h2>New Point</h2>
       <div className={styles.newPointContainer}>
-        <h4 className={loading ? styles.loadingMessage : styles.loadingMessageHidden}>Loading...</h4>
+        <h4 className={loading ? styles.loadingMessage : styles.loadingMessageHidden}>Dipping our toes in now! Please wait!<br></br><img src="https://i.imgur.com/TkUkZ9T.png" alt="Cute loading whale"/> </h4>
         <form
           autoComplete="off"
           onSubmit={handleSubmit}
