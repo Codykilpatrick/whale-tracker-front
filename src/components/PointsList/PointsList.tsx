@@ -1,5 +1,5 @@
 // npm packages
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, MutableRefObject } from 'react';
 import Map, { Marker } from "react-map-gl";
 
 // services
@@ -15,14 +15,13 @@ import NewPointForm from '../NewPointForm/NewPointForm'
 
 const PointsList = (): JSX.Element => {
   const [points, setPoints] = useState<Point[]>([])
-  let [viewport, setViewport] = useState({
-    latitude: 37.7,
-    longitude: -122,
-    zoom: 8,
-    width: innerWidth,
-    height: innerHeight
-  })
 
+  const pointRefs = useRef({}) as MutableRefObject<any>
+
+  const scrollPointIntoView = (pointId: number): void => {
+    pointRefs.current[pointId].scrollIntoView({ behavior: "smooth" })
+  }
+  
   useEffect((): void => {
     const fetchPoints = async (): Promise<void> => {
       try {
@@ -63,7 +62,7 @@ const PointsList = (): JSX.Element => {
           longitude={point.longitude} 
           latitude={point.latitude} 
           anchor="bottom" 
-          onClick={() => console.log("AHH")}
+          onClick={() => scrollPointIntoView(point.id)}
         >
           <img src="https://i.imgur.com/6dddE05.png"/>
         </Marker>
@@ -71,8 +70,8 @@ const PointsList = (): JSX.Element => {
       </Map>
       <h1>Measurements</h1>
       <NewPointForm handleAddPoint={handleAddPoint}/>
-      {points.map((point: Point) =>
-        <PointComponent key={point.id} point={point} points={points} setPoints={setPoints}/>
+      {points.map((point: Point, index: number) =>
+        <PointComponent key={point.id} point={point} points={points} setPoints={setPoints} pointRefs={pointRefs}/>
       )}
     </>
   )

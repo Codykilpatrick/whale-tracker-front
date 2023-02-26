@@ -16,10 +16,11 @@ interface PointsProps {
   point: Point;
   points: any;
   setPoints: any;
+  pointRefs: any;
 }
 
 const PointComponent = (props: PointsProps): JSX.Element => {
-  const { point } = props
+  const { point, pointRefs } = props
   const [show, setShow] = useState<boolean>(false)
 
   const handleDeletePoint = async(id: number): Promise<void> => {
@@ -39,7 +40,7 @@ const PointComponent = (props: PointsProps): JSX.Element => {
 
   return (
     <>
-      <h2 className={styles.pointHeader}>
+      <h2 className={styles.pointHeader} ref={(el) => pointRefs.current[point.id] = el}>
         <p>
           Latitude: {point.latitude}
         </p>
