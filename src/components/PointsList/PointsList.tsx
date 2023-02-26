@@ -46,6 +46,7 @@ const PointsList = (): JSX.Element => {
 
   return (
     <>
+      <h1>Measurements</h1>
       <Map
         mapboxAccessToken='pk.eyJ1IjoiY29keWtpbHBhdHJpY2siLCJhIjoiY2xla2FzOXR3MGF3eTNwbG00OXNxMXFjcCJ9.85jtdIfHPE4UGaz8qvp8OA'
         initialViewState={{
@@ -68,7 +69,6 @@ const PointsList = (): JSX.Element => {
         </Marker>
           )}
       </Map>
-      <h1>Measurements</h1>
       <NewPointForm handleAddPoint={handleAddPoint}/>
       {points.map((point: Point) =>
         <PointComponent key={point.id} point={point} points={points} setPoints={setPoints} pointRefs={pointRefs}/>
