@@ -70,7 +70,7 @@ const PointsList = (): JSX.Element => {
       </Map>
       <h1>Measurements</h1>
       <NewPointForm handleAddPoint={handleAddPoint}/>
-      {points.map((point: Point, index: number) =>
+      {points.map((point: Point) =>
         <PointComponent key={point.id} point={point} points={points} setPoints={setPoints} pointRefs={pointRefs}/>
       )}
     </>

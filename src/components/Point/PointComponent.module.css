@@ -45,7 +45,7 @@ svg {
 
 .dataContainer button:hover {
   background-color: rgba(255, 0, 0, 0.44);
-  color: white;
+  color: black;
 }
 
 .dataContainerHidden {

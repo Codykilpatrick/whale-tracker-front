@@ -58,7 +58,6 @@ div.mapboxgl-map img {
 div.mapboxgl-map img:hover {
   cursor: pointer;
   width: 35px;
-
 }
 
 div.mapboxgl-map a {
