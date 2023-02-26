@@ -4,6 +4,19 @@
   flex-direction: column;
 }
 
-main h1 {
-  /* color:  red; */
+.notLoggedIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notLoggedIn div {
+  display: flex;
+  align-items: center;
+  padding: 5%;
+}
+
+.notLoggedIn div article {
+  padding: 5%;
+  font-size: 24px;
 }
