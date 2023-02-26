@@ -5,7 +5,7 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #446DF6;
+  background-color: #B0D0D3;
 }
 
 code {
@@ -21,8 +21,8 @@ nav {
   display: flex;
   padding: 12px 20px;
   align-items: center;
-  background: #00635D;
-  border-bottom: 1px solid #EFA00B;
+  background: #C08497;
+  border-bottom: 3px solid black;
 }
 
 nav ul {

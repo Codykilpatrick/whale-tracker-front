@@ -15,25 +15,30 @@
   align-items: center;
   border-radius: 20px;
   justify-content: space-evenly;
-  background-color: #EAC435;
+  background-color: #F7AF9D;
   padding: 1%;
 }
 
 .newPointContainer form input {
-  background-color: #446DF6;
+  background-color: rgba(245, 245, 245, 0.521);
   border: none;
   border-radius: 20px;
   padding: 2%;
 }
 
 .newPointContainer button {
-  background-color: #446DF6;
+  background-color: rgba(245, 245, 245, 0.521);
   border: none;
   border-radius: 20px;
   padding: 20%;
 }
 
 .newPointContainer button:hover {
-  background-color: #00635D;
-  color: #EAC435;
+  background-color: #151E3F;
+  color: white;
+}
+
+.newPointContainer button:disabled:hover {
+  background-color: rgba(245, 245, 245, 0.521);
+  color: black;
 }

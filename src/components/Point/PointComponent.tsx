@@ -95,7 +95,7 @@ const PointComponent = (props: PointsProps): JSX.Element => {
             marker: {color: 'red'},
           }
         ]}
-        layout={ { plot_bgcolor:"#446DF6", paper_bgcolor:"#446DF6", width: 320,  margin: {
+        layout={ { plot_bgcolor:"#B0D0D3", paper_bgcolor:"#B0D0D3", width: 320,  margin: {
           l: 50,
           r: 50,
           b: 20,
