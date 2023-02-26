@@ -47,6 +47,7 @@
   border-radius: 20px;
   padding: 20%;
   width: 100%;
+  border: 2px solid transparent;
 }
 
 .loginContainer a {
@@ -55,8 +56,22 @@
   margin: 0;
   padding: 10%;
   text-decoration: none;
+  border: 2px solid transparent;
 }
 
 .loginContainer a button {
   background-color: rgba(245, 245, 245, 0);
+  border: 2px solid transparent;
+}
+
+.loginContainer button:hover, .loginContainer a:hover {
+  border: 2px solid black;
+}
+
+.loginContainer a button:hover {
+  border: 2px solid rgba(245, 222, 179, 0);
+}
+
+.loginContainer button:disabled {
+  border: 2px solid rgba(255, 0, 0, 0);
 }

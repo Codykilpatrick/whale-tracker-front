@@ -45,6 +45,7 @@
   border: none;
   border-radius: 20px;
   padding: 20%;
+  border: 2px solid transparent;
 }
 
 .signupContainer button, .signupContainer a {
@@ -56,6 +57,7 @@
   border-radius: 20px;
   padding: 20%;
   width: 100%;
+  border: 2px solid transparent;
 }
 
 .signupContainer a {
@@ -64,8 +66,22 @@
   margin: 0;
   padding: 20%;
   text-decoration: none;
+  border: 2px solid transparent;
 }
 
 .signupContainer a button {
   background-color: rgba(245, 245, 245, 0);
+  border: 2px solid transparent;
+}
+
+.signupContainer button:hover, .signupContainer a:hover {
+  border: 2px solid black;
+}
+
+.signupContainer a button:hover {
+  border: 2px solid rgba(245, 222, 179, 0);
+}
+
+.signupContainer button:disabled {
+  border: 2px solid rgba(255, 0, 0, 0);
 }
