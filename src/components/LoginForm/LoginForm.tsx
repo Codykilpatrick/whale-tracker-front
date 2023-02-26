@@ -52,7 +52,7 @@ const LoginForm = (props: AuthFormProps): JSX.Element => {
       className={styles.loginContainer}
     >
       <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
+        <label htmlFor="email" className={styles.label}>Email:</label>
         <input
           type="text"
           id="email"
@@ -62,7 +62,7 @@ const LoginForm = (props: AuthFormProps): JSX.Element => {
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
+        <label htmlFor="password" className={styles.label}>Password:</label>
         <input
           type="password"
           id="password"

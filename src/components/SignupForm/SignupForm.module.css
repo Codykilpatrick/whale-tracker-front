@@ -1,9 +1,18 @@
-.container {
+.signupContainer {
+  border-radius: 20px;
+  border: 3px solid black;
+  background-color: #F7AF9D;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  padding: 2%;
+  width: 50%;
+}
+
+.signupContainer > * {
+  display: flex;
+  margin: 6% 0;
 }
 
 .label,
@@ -13,4 +22,50 @@
 
 .inputContainer {
   margin-bottom: 1rem;
+}
+
+.signupContainer div input {
+  background-color: rgba(245, 245, 245, 0.521);
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+.signupContainer div.inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.signupContainer .buttonContainer {
+  background-color: red;
+}
+
+.signupContainer button {
+  background-color: rgba(245, 245, 245, 0.521);
+  border: none;
+  border-radius: 20px;
+  padding: 20%;
+}
+
+.signupContainer button, .signupContainer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(245, 245, 245, 0.521);
+  border: none;
+  border-radius: 20px;
+  padding: 20%;
+  width: 100%;
+}
+
+.signupContainer a {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  padding: 20%;
+  text-decoration: none;
+}
+
+.signupContainer a button {
+  background-color: rgba(245, 245, 245, 0);
 }

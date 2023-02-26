@@ -62,10 +62,10 @@ const SignupForm = (props: AuthFormProps): JSX.Element => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
+      className={styles.signupContainer}
     >
       <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>Name</label>
+        <label htmlFor="name" className={styles.label}>Name:</label>
         <input
           type="text"
           id="name"
@@ -76,7 +76,7 @@ const SignupForm = (props: AuthFormProps): JSX.Element => {
       </div>
       <div className={styles.inputContainer}>
         <label htmlFor="email" className={styles.label}>
-          Email
+          Email:
         </label>
         <input
           type="text"
@@ -88,7 +88,7 @@ const SignupForm = (props: AuthFormProps): JSX.Element => {
       </div>
       <div className={styles.inputContainer}>
         <label htmlFor="password" className={styles.label}>
-          Password
+          Password:
         </label>
         <input
           type="password"
@@ -100,7 +100,7 @@ const SignupForm = (props: AuthFormProps): JSX.Element => {
       </div>
       <div className={styles.inputContainer}>
         <label htmlFor="confirm" className={styles.label}>
-          Confirm Password
+          Confirm Password:
         </label>
         <input
           type="password"
@@ -108,17 +108,6 @@ const SignupForm = (props: AuthFormProps): JSX.Element => {
           value={passwordConf}
           name="passwordConf"
           onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="photo-upload" className={styles.label}>
-          Upload Photo
-        </label>
-        <input
-          type="file"
-          id="photo-upload"
-          name="photo"
-          onChange={handleChangePhoto}
         />
       </div>
       <div className={styles.inputContainer}>
