@@ -49,9 +49,9 @@ const PointsList = (): JSX.Element => {
       <Map
       mapboxAccessToken='pk.eyJ1IjoiY29keWtpbHBhdHJpY2siLCJhIjoiY2xla2FzOXR3MGF3eTNwbG00OXNxMXFjcCJ9.85jtdIfHPE4UGaz8qvp8OA'
         initialViewState={{
-          longitude: -100,
-          latitude: 40,
-          zoom: 3.5
+          longitude: points[0].longitude,
+          latitude: points[0].latitude,
+          zoom: 1
         }}
         style={{width: 600, height: 400}}
         mapStyle="mapbox://styles/codykilpatrick/clekdcsmo001k01ofk2cgb9aj"
