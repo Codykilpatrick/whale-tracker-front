@@ -23,7 +23,7 @@ const Landing = (props: LandingProps): JSX.Element => {
   }
   return (
     <main className={styles.notLoggedIn}>
-      <h1>Welcome to whale tracker!</h1>
+      <h1>Welcome to Whale Tracker!</h1>
       <div>
         <img src="https://i.imgur.com/TaCX6n3.png" alt="Whale" />
         <article>

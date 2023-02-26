@@ -2,10 +2,10 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-// services
+// stylesheets
 import styles from './LoginForm.module.css'
 
-// stylesheets
+// services
 import * as authService from '../../services/authService'
 
 // types
@@ -49,7 +49,7 @@ const LoginForm = (props: AuthFormProps): JSX.Element => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
+      className={styles.loginContainer}
     >
       <div className={styles.inputContainer}>
         <label htmlFor="email" className={styles.label}>Email</label>
@@ -71,7 +71,7 @@ const LoginForm = (props: AuthFormProps): JSX.Element => {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className={styles.buttonContainer}>
         <button disabled={isFormInvalid()} className={styles.button}>
           Log In
         </button>
