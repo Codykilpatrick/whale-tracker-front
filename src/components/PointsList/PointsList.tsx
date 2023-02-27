@@ -47,7 +47,7 @@ const PointsList = (): JSX.Element => {
   return (
     <>
       <h1>Measurements</h1>
-      {/* <Map
+      <Map
         mapboxAccessToken='pk.eyJ1IjoiY29keWtpbHBhdHJpY2siLCJhIjoiY2xla2NkZXhmMGdyeDQzbWxkd3Flc2UxbCJ9.YDQHBecK22YVpggfTsAsLA'
         initialViewState={{
           longitude: points[0].longitude,
@@ -68,7 +68,7 @@ const PointsList = (): JSX.Element => {
           <img src="https://i.imgur.com/6dddE05.png"/>
         </Marker>
           )}
-      </Map> */}
+      </Map>
       <NewPointForm handleAddPoint={handleAddPoint}/>
       {points.map((point: Point) =>
         <PointComponent key={point.id} point={point} points={points} setPoints={setPoints} pointRefs={pointRefs}/>
