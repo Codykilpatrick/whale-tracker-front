@@ -30,8 +30,11 @@ const NewPointForm = (props: NewPointFormProps):JSX.Element => {
   const handleSubmit = async (evt: React.FormEvent): Promise<void> => {
     evt.preventDefault()
     try {
-      console.log(formData);
+      console.log(typeof formData.latitude);
       
+      formData.latitude = parseFloat(formData.latitude)
+      console.log(formData.latitude);
+
       setLoading(true)
       const newPoint = await pointService.createPoint(formData)
       props.handleAddPoint(newPoint)
