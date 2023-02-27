@@ -29,6 +29,7 @@ const PointComponent = (props: PointsProps): JSX.Element => {
   }
 
   const depthArray: number[] = []
+  console.log(point)
   point.depth.forEach(depth => depthArray.push(depth))
   const soundSpeedArray: number[] = []
   point.soundspeed.forEach(soundSpeed => soundSpeedArray.push(soundSpeed))
