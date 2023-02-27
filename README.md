@@ -13,7 +13,7 @@
 
 - React
 - CSS
-- JavaScript
+- TypeScript
 - Git
 - Node.js
 - Bit.io
