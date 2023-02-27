@@ -23,6 +23,8 @@ async function createPoint(
   formData: PointFormData
 ): Promise<void> {
   try {
+    console.log("FORM DATA IN SERVICE FUNCTION", formData);
+    
     const res = await fetch(BASE_URL, {
       method: 'POST',
       headers: { 'Authorization': `Bearer ${tokenService.getToken()}`,
