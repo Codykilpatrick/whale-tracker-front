@@ -57,7 +57,7 @@ const PointsList = (): JSX.Element => {
         style={{width: 600, height: 400}}
         mapStyle="mapbox://styles/codykilpatrick/clekdcsmo001k01ofk2cgb9aj"
       >
-        {/* {points.map((point: Point) =>
+        {points.map((point: Point) =>
         <Marker
           key={point.id + point.latitude + point.longitude}
           longitude={point.longitude} 
@@ -67,7 +67,7 @@ const PointsList = (): JSX.Element => {
         >
           <img src="https://i.imgur.com/6dddE05.png"/>
         </Marker>
-          )} */}
+          )}
       </Map>
       <NewPointForm handleAddPoint={handleAddPoint}/>
       {points.map((point: Point) =>
