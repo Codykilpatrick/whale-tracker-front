@@ -31,6 +31,7 @@ async function createPoint(
     })
     return await res.json()
   } catch (error) {
+    console.log(error);
     throw error
   }
 }
