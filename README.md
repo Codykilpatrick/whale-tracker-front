@@ -7,7 +7,7 @@
 
   Whale Tracker is perfect for anyone who needs to access ocean data. Whether they're a professional oceanographer or just a curious beachgoer. With its easy-to-use interface and powerful data capabilities, it's the perfect tool for anyone who wants to explore the mysteries of the ocean.
 
-## [Try it Here]() 
+## [Try it Here](https://whale-tracker.netlify.app/) 
 
 ## Technologies used 💾
 

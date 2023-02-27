@@ -48,7 +48,7 @@ const PointsList = (): JSX.Element => {
     <>
       <h1>Measurements</h1>
       <Map
-        mapboxAccessToken='pk.eyJ1IjoiY29keWtpbHBhdHJpY2siLCJhIjoiY2xla2FzOXR3MGF3eTNwbG00OXNxMXFjcCJ9.85jtdIfHPE4UGaz8qvp8OA'
+        mapboxAccessToken='pk.eyJ1IjoiY29keWtpbHBhdHJpY2siLCJhIjoiY2xla2NkZXhmMGdyeDQzbWxkd3Flc2UxbCJ9.YDQHBecK22YVpggfTsAsLA'
         initialViewState={{
           longitude: points[0].longitude,
           latitude: points[0].latitude,
