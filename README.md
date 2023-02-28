@@ -11,16 +11,19 @@
 
 ## Technologies used 💾
 
-- React
-- CSS
 - TypeScript
+- React
+- Vite
+- PostgreSQL
+- Plotly.js
+- Mapbox
+- CSS
 - Git
 - Node.js
 - Bit.io
 - Express
 - Sequelize
-- Plotly.js
-- Mapbox
+- Postman
 
 ## Ice Box 🧊
 
