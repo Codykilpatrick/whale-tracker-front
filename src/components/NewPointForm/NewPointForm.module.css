@@ -22,7 +22,7 @@
   justify-content: space-evenly;
   background-color: #F7AF9D;
   padding: 1%;
-  border: 3px solid black;
+  box-shadow: 0 0 .5rem 0 black;
 }
 
 .newPointContainer form input {

@@ -38,18 +38,17 @@ nav div {
   display: flex;
   align-items: center;
   height: 100%;
+  gap: 1rem;
 }
 
 nav div p {
   text-align: center;
-  padding: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 nav div img {
   height: 125%;
-  padding: 2rem;
 }
 
 li {
@@ -67,9 +66,8 @@ li a:hover {
 }
 
 div.mapboxgl-map {
-  margin-top: 2%;
-  border-radius: 40px;
-  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 .5rem 0 black;
 }
 
 div.mapboxgl-map img {

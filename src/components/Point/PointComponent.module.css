@@ -7,9 +7,9 @@ svg {
   display: flex;
   width: 80%;
   justify-content: space-evenly;
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 0;
 }
 
 .dataContainer div {
@@ -39,8 +39,10 @@ svg {
 
 .dataContainer button {
   border: none;
-  border-right: 2px solid black;
+  margin-right: -1p;
   background-color: #B0D0D3;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .dataContainer button:hover {
@@ -52,14 +54,14 @@ svg {
   display: none;
 }
 
-.pointHeader{
+.pointHeader {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 80%;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #F7AF9D;
-  border: 3px solid black;
+  box-shadow: 0 0 .5rem 0 black;
 }
 
 .pointHeader button {
