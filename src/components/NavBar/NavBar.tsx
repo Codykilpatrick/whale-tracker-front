@@ -14,11 +14,13 @@ const NavBar = (props: NavBarProps): JSX.Element => {
   
   return (
     <nav>
+        <div>
+          <img src="https://i.imgur.com/TaCX6n3.png" alt="Whale Icon" />
+          <p>Whale-Tracker</p>
+        </div>
       {user ?
-        <ul>
-          <li>Welcome, {user.name}</li>
+        <ul id='link-container'>
           <li><NavLink to="/">Home</NavLink></li>
-          {/* <li><NavLink to="/profiles">Profiles</NavLink></li> */}
           <li><NavLink to="/change-password">Change Password</NavLink></li>
           <li><NavLink to="" onClick={handleLogout}>Log Out</NavLink></li>
         </ul>
