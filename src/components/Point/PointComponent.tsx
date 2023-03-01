@@ -21,7 +21,7 @@ interface PointsProps {
 
 const PointComponent = (props: PointsProps): JSX.Element => {
   const { point, pointRefs } = props
-  const [show, setShow] = useState<boolean>(false)
+  const [show, setShow] = useState<boolean>(true)
 
   const handleDeletePoint = async(id: number): Promise<void> => {
     await pointService.deletePoint(id)
