@@ -11,6 +11,7 @@
 
 ## Technologies used 💾
 
+- Amentum.io Ocean data API
 - TypeScript
 - React
 - Vite
@@ -24,6 +25,9 @@
 - Express
 - Sequelize
 - Postman
+
+## Important notes
+- Mapbox requires an API key that currently lives on the front-end. I ensured safety by adding a site restriction through Mapbox so that key will only work on my site.
 
 ## Ice Box 🧊
 
